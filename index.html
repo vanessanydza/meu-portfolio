@@ -1,32 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-    <title>Meu Portfólio</title>
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            padding: 50px;
-            background: #f8f9fa;
-        }
-        h1 { color: #2c3e50; }
-        .destaque { color: #e74c3c; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Vanessa Nydza da Silva</title>
+    
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Portfólio de Vanessa Nydza - Estudante de Ciência de Dados">
+    <meta name="keywords" content="portfólio, ciência de dados, desenvolvedora, projetos">
+    <meta name="author" content="Vanessa Nydza da Silva">
 </head>
+
 <body>
-    <h1>👨‍💻 Portfólio de <span class="destaque">[Vanessa Nydza]</span></h1>
-    <p>Estudante de Ciência de Dados</p>
-    
-    <div style="margin: 40px;">
-        <h2>🎯 Projetos</h2>
-        <div style="display: inline-block; text-align: left;">
-            <p>✅ <strong>Cofrinho Digital:</strong> Sistema Java para controle financeiro</p>
-            <p>✅ <strong>Coffee Place:</strong> Site de cafeteria responsivo</p>
-            <p>✅ <strong>Analisador de Texto:</strong> Ferramenta Python para dados</p>
-        </div>
-    </div>
-    
-    <p>📧 Contato: nydza.vanessa@gmail.com</p>
-    <p>💻 GitHub: github.com/vanessanydza</p>
+
+    <!-- ===========================
+        MENU FIXO (NAV)
+    ============================ -->
+    <header class="site-header">
+        <nav class="nav">
+            
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="top-nav">☰</button>
+            
+            <div id="top-nav" class="nav-links">
+                <a href="#sobre" class="nav-link">Sobre mim</a>
+                <a href="#formacao" class="nav-link">Formação</a>
+                <a href="#portfolio" class="nav-link">Projetos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+                
+                <!-- Botão Tema -->
+                <button id="theme-toggle" class="tema-btn" aria-label="Alternar tema claro/escuro">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+
+    <!-- ===========================
+    SEÇÃO: SOBRE MIM
+    ============================ -->   
+        <section id="sobre" class="secao fade-up">
+            <h2>Sobre mim</h2>
+            <div>
+            <p>
+                Sou Vanessa, estudante de Ciência de Dados. <br>
+                Atualmente aprofundo meus estudos em Python, SQL, RPA e Power BI. <br>
+                Também descobri forte interesse por HTML, CSS e pela evolução consistente em JavaScript. <br>
+                Meu foco é desenvolver projetos reais e aplicar cada aprendizado de forma prática, ampliando minha capacidade técnica e construindo soluções cada vez mais eficientes.
+            </p>
+            </div>
+            <br>
+            <p>
+                Hobbies: Leitura, corrida e aprender mais sobre as tecnologias.
+            </p>
+        </section>
+
+    <!-- ===========================
+        SEÇÃO: FORMAÇÃO
+    ============================ -->
+        <section id="formacao" class="secao fade-up">
+            <h2>Formação</h2>
+
+            <ul class="lista">
+                <li><strong>Graduação:</strong> Ciência de Dados (em andamento)</li>
+                <li><strong>Cursos:</strong> Python básico, Java básico, HTML5, CSS3, JavaScript básico</li>
+            </ul>
+        </section>
+
+    <!-- ===========================
+        SEÇÃO: PORTFÓLIO
+    ============================ -->
+        <section id="portfolio" class="secao fade-up">
+            <h2>Projetos</h2>
+
+                <div class="projetos-grid">
+
+                <!-- PROJETO 1 -->
+                <div class="card project-card fade-up">
+                    <h3>Análise de Dados</h3>
+                    <p>Mini-análise usando Python e dataset público.</p>
+                    <a href="#" class="btn-project" aria-label="Ver projeto Análise de Dados">
+                    <span>Ver Projeto</span>
+                    </a>
+                    </div>
+
+                <!-- PROJETO 2 -->
+                <div class="card project-card fade-up">
+                    <h3>CRUD em Java</h3>
+                    <p>Cadastro simples com adição, listagem e exclusão.</p>
+                    <a href="#" class="btn-project" aria-label="Ver projeto CRUD em Java">Ver Projeto</a>
+                </div>
+
+                <!-- PROJETO 3 -->
+                <div class="card project-card fade-up">
+                    <h3>Página HTML/CSS</h3>
+                    <p>Clone simplificado de interface (estudo).</p>
+                    <a href="#" class="btn-project" aria-label="Ver projeto Página HTML/CSS">Ver Projeto</a>
+                </div>
+
+            </div>
+        </section>
+
+
+    <!-- ===========================
+        SEÇÃO: CONTATO (FORMULÁRIO)
+    ============================ -->
+        <section id="contato" class="secao fade-up">
+            <h2>Contato</h2>
+
+            <form id="contact-form" aria-labelledby="contato">
+
+                <label for="name">Nome:</label>
+                <input type="text" id="name" placeholder="Seu nome" required aria-describedby="name-help">
+                <small id="name-help" class="help-text">Digite seu nome completo</small>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="email@exemplo.com" required aria-describedby="email-help">
+                <small id="email-help" class="help-text">Digite um e-mail válido</small>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" placeholder="Digite sua mensagem..." required rows="5" aria-describedby="message-help"></textarea>
+                <small id="message-help" class="help-text">Máximo 500 caracteres</small>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- ===========================
+        RODAPÉ
+    ============================ -->
+    <footer class="site-footer">
+        © 2025 Vanessa — Portfólio pessoal<br>
+        <small>Tecnologias: HTML5, CSS3, JavaScript</small>
+    </footer>
+
+    <script src="javaScript.js"></script>
+
 </body>
+
 </html>
