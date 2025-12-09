@@ -11,7 +11,7 @@
     --marromclaro: #c7a27c;
     --muted: #b8a89b;
     --bege: #c8a878;
-    --rosa:	#d6c185;
+    --rosa: #d6c185;
     --radius: 10px;
     --maxw: 1000px;
     font-family: "Cabin", sans-serif;
@@ -157,7 +157,7 @@ html.light-theme .site-header.scrolled {
     left: -100%;
     width: 100%;
     height: 2px;
-    background: var(--pink);
+    background: var(--marromclaro);
     transition: left 0.3s ease;
 }
 
@@ -236,6 +236,9 @@ html.light-theme .site-header.scrolled {
     animation: fadeInUp 0.8s ease 0.3s both;
 }
 
+/* ----------------------------------------------------
+   FORMAÇÃO - TAGS DE HABILIDADES
+----------------------------------------------------- */
 .lista {
     list-style: none;
     padding-left: 20px;
@@ -260,6 +263,14 @@ html.light-theme .site-header.scrolled {
 
 .lista li strong {
     color: var(--brown);
+}
+
+/* Tags de habilidades */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
 }
 
 /* ----------------------------------------------------
@@ -298,45 +309,146 @@ html.light-theme .site-header.scrolled {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border-color: var(--marromclaro);
-   
+}
+
+/* Placeholder para imagens */
+.placeholder-imagem {
+    height: 180px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .placeholder-imagem {
+    transform: scale(1.05);
+}
+
+/* Imagem real dos projetos */
+.projeto-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .projeto-imagem {
+    transform: scale(1.05);
 }
 
 .card h3 {
     margin-bottom: 15px;
-    color:#91807C;
+    color: var(--bege);
     font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .card p {
     color: var(--muted);
     flex-grow: 1;
     margin-bottom: 20px; 
-    min-height: 60px;
+    min-height: 80px;
+    line-height: 1.6;
 }
 
+/* Tags de tecnologias */
+.projeto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tag {
+    background: var(--marromclaro);
+    color: var(--brown);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: var(--rosa);
+    transform: translateY(-2px);
+}
+
+/* Links dos projetos */
+.projeto-links {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
 
 .btn-project {
     background: var(--marromclaro);
     color: var(--brown);
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: var(--radius);
     text-decoration: none;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
-    display: inline-block;
-    width: fit-content;
-    margin-top: auto; 
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .btn-project:hover,
 .btn-project:focus {
     background: var(--rosa);
-    transform: scale(1.05);
+    transform: translateY(-2px);
     outline: 2px solid var(--bege);
 }
+
+.btn-secondary {
+    background: transparent;
+    color: var(--marromclaro);
+    border: 2px solid var(--marromclaro);
+}
+
+.btn-secondary:hover {
+    background: var(--marromclaro);
+    color: var(--brown);
+}
+
+/* Botão para ver todos no GitHub */
+.github-all-btn {
+    background: linear-gradient(135deg, var(--marromclaro), var(--bege));
+    color: var(--brown);
+    padding: 15px 30px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.github-all-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(199, 162, 124, 0.3);
+}
+
 /* ----------------------------------------------------
    FORMULÁRIO DE CONTATO
 ----------------------------------------------------- */
@@ -377,7 +489,7 @@ html.light-theme .site-header.scrolled {
 #contact-form textarea:focus {
     outline: none;
     border-color: var(--marromclaro);
-    box-shadow: 0 0 0 3px rgba(251, 203, 156, 0.2);
+    box-shadow: 0 0 0 3px rgba(199, 162, 124, 0.2);
     transform: translateY(-2px);
 }
 
@@ -405,7 +517,7 @@ html.light-theme .site-header.scrolled {
 
 #contact-form button[type="submit"]:hover,
 #contact-form button[type="submit"]:focus {
-    background: var(--cream);
+    background: var(--rosa);
     outline: 2px solid var(--bege);
     transform: translateY(-2px);
     animation: pulseSoft 1.5s infinite;
@@ -459,6 +571,17 @@ html.light-theme .site-header.scrolled {
     opacity: 0.7;
 }
 
+/* Links no rodapé */
+.site-footer a {
+    color: var(--marromclaro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: var(--rosa);
+    text-decoration: underline;
+}
 
 /* ----------------------------------------------------
    ANIMAÇÕES CSS
@@ -474,25 +597,30 @@ html.light-theme .site-header.scrolled {
     }
 }
 
-@keyframes pulseSoft {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(251, 203, 156, 0.4);
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
     }
-    70% {
-        transform: scale(1.02);
-        box-shadow: 0 0 0 10px rgba(251, 203, 156, 0);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(251, 203, 156, 0);
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+@keyframes pulseSoft {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(199, 162, 124, 0.4);
+    }
+    70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(199, 162, 124, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(199, 162, 124, 0);
+    }
 }
 
 @keyframes bounce {
@@ -538,6 +666,7 @@ html.light-theme .site-header.scrolled {
         transform: scale(1) translateY(0);
     }
 }
+
 @keyframes cardEntrance {
     to {
         opacity: 1;
@@ -670,9 +799,18 @@ html.light-theme .site-header.scrolled {
         gap: 20px;
     }
     
+    .projeto-links {
+        flex-direction: column;
+    }
+    
     .btn-project {
-        padding: 10px 20px;
+        padding: 12px;
         font-size: 14px;
+    }
+    
+    .placeholder-imagem,
+    .projeto-imagem {
+        height: 150px;
     }
 }
 
@@ -718,4 +856,3 @@ html.light-theme .site-header.scrolled {
         scroll-behavior: auto !important;
     }
 }
-

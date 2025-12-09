@@ -269,22 +269,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* --------- BOTÕES DOS PROJETOS  --------- */
-   document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('btn-project')) {
-      e.preventDefault();
-      
-      // Encontrar o título do projeto
-      const card = e.target.closest('.card');
-      if (card) {
-        const titleElement = card.querySelector('h3');
-        if (titleElement) {
-          const projectTitle = titleElement.textContent;
-          showMessage(`🚧 O projeto "${projectTitle}" ainda está em desenvolvimento.\nEm breve estará disponível para visualização!`);
+ /* --------- BOTÕES DOS PROJETOS  --------- */
+
+document.addEventListener('click', function(e) {
+    
+    if (e.target.classList.contains('btn-project') || 
+        e.target.closest('.btn-project')) {
+          
+        const btn = e.target.closest('.btn-project');
+        if (btn) {
+            // Efeito de clique
+            btn.style.transform = 'scale(0.95)';
+            btn.style.transition = 'transform 0.1s ease';
+            
+            setTimeout(() => {
+                btn.style.transform = '';
+            }, 100);
         }
-      }
     }
-  });
+});
 
   /* --------- HEADER COM SCROLL --------- */
   const header = document.querySelector('.site-header');

@@ -9,9 +9,12 @@
     <!-- CSS externo -->
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Meta tags para SEO -->
     <meta name="description" content="Portfólio de Vanessa Nydza - Estudante de Ciência de Dados">
-    <meta name="keywords" content="portfólio, ciência de dados, desenvolvedora, projetos">
+    <meta name="keywords" content="portfólio, ciência de dados, projetos, Java, Python, HTML, CSS">
     <meta name="author" content="Vanessa Nydza da Silva">
 </head>
 
@@ -44,18 +47,17 @@
     ============================ -->   
         <section id="sobre" class="secao fade-up">
             <h2>Sobre mim</h2>
-            <div>
-            <p>
-                Sou Vanessa, estudante de Ciência de Dados. <br>
-                Atualmente aprofundo meus estudos em Python, SQL, RPA e Power BI. <br>
-                Também descobri forte interesse por HTML, CSS e pela evolução consistente em JavaScript. <br>
-                Meu foco é desenvolver projetos reais e aplicar cada aprendizado de forma prática, ampliando minha capacidade técnica e construindo soluções cada vez mais eficientes.
-            </p>
+            <div class="sobre-content">
+                <p>
+                    Sou Vanessa, estudante de Ciência de Dados. <br>
+                    Atualmente aprofundo meus estudos em Python, SQL, RPA e Power BI. <br>
+                    Também descobri forte interesse por HTML, CSS e pela evolução consistente em JavaScript. <br>
+                    Meu foco é desenvolver projetos reais e aplicar cada aprendizado de forma prática, ampliando minha capacidade técnica e construindo soluções cada vez mais eficientes.
+                </p>
+                <p class="hobbies">
+                    Hobbies: Leitura, corrida e aprender mais sobre as tecnologias.
+                </p>
             </div>
-            <br>
-            <p>
-                Hobbies: Leitura, corrida e aprender mais sobre as tecnologias.
-            </p>
         </section>
 
     <!-- ===========================
@@ -67,6 +69,16 @@
             <ul class="lista">
                 <li><strong>Graduação:</strong> Ciência de Dados (em andamento)</li>
                 <li><strong>Cursos:</strong> Python básico, Java básico, HTML5, CSS3, JavaScript básico</li>
+                <li><strong>Habilidades:</strong> 
+                    <div class="skills-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Git/GitHub</span>
+                        <span class="tag">Power BI</span>
+                    </div>
+                </li>
             </ul>
         </section>
 
@@ -75,57 +87,157 @@
     ============================ -->
         <section id="portfolio" class="secao fade-up">
             <h2>Projetos</h2>
+            <p class="portfolio-subtitle">
+                Confira alguns projetos que desenvolvi durante meus estudos
+            </p>
 
-                <div class="projetos-grid">
+            <div class="projetos-grid">
 
-                <!-- PROJETO 1 -->
-                <div class="card project-card fade-up">
-                    <h3>Análise de Dados</h3>
-                    <p>Mini-análise usando Python e dataset público.</p>
-                    <a href="#" class="btn-project" aria-label="Ver projeto Análise de Dados">
-                    <span>Ver Projeto</span>
-                    </a>
+    <!-- PROJETO 1: CAFETERIA -->
+            <article class="card project-card">
+                <div class="projeto-imagem-container">
+                    <div class="placeholder-imagem placeholder-cafeteria">
+                        <i class="fas fa-coffee"></i>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <div style="font-weight: bold; font-size: 1.1rem;">Coffee Place</div>
+                        </div>
                     </div>
-
-                <!-- PROJETO 2 -->
-                <div class="card project-card fade-up">
-                    <h3>CRUD em Java</h3>
-                    <p>Cadastro simples com adição, listagem e exclusão.</p>
-                    <a href="#" class="btn-project" aria-label="Ver projeto CRUD em Java">Ver Projeto</a>
                 </div>
-
-                <!-- PROJETO 3 -->
-                <div class="card project-card fade-up">
-                    <h3>Página HTML/CSS</h3>
-                    <p>Clone simplificado de interface (estudo).</p>
-                    <a href="#" class="btn-project" aria-label="Ver projeto Página HTML/CSS">Ver Projeto</a>
+                
+                <h3><i class="fas fa-coffee"></i> Coffee Place</h3>
+                <p>Site responsivo para cafeteria local com tema claro/escuro, cardápio interativo e design moderno. Totalmente adaptável para mobile.</p>
+                
+                <div class="projeto-tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Responsivo</span>
                 </div>
+                
+                <div class="projeto-links">
+                    <!-- Link para código no GitHub -->
+                    <a href="https://github.com/vanessanydza/Cafeteria-site" 
+                    target="_blank" class="btn-project">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                    <!-- Link para o site no GitHub Pages -->
+                    <a href="https://vanessanydza.github.io/Cafeteria-site/" 
+                    target="_blank" class="btn-project btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> Site
+                    </a>
+                </div>
+            </article>
 
+            <!-- PROJETO 2: ANALISADOR DE TEXTO -->
+            <article class="card project-card">
+                <div class="projeto-imagem-container">
+                    <div class="placeholder-imagem placeholder-analisador">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                </div>
+                
+                <h3><i class="fas fa-chart-bar"></i> Analisador de Texto</h3>
+                <p>Ferramenta Python para análise de dados textuais, com contagem de palavras, identificação de termos frequentes e visualização de dados.</p>
+                
+                <div class="projeto-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Matplotlib</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">Análise de Dados</span>
+                </div>
+                
+                <div class="projeto-links">
+                    <!-- Apenas o link para o código -->
+                    <a href="https://github.com/vanessanydza/Analisador-texto" 
+                    target="_blank" class="btn-project" style="width: 100%;">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
+            </article>
+
+            <!-- PROJETO 3: COFRINHO DIGITAL -->
+            <article class="card project-card">
+                <div class="projeto-imagem-container">
+                    <div class="placeholder-imagem placeholder-cofrinho">
+                        <i class="fas fa-piggy-bank"></i>
+                </div>
+            </div>
+        
+        <h3><i class="fas fa-piggy-bank"></i> Cofrinho Digital</h3>
+        <p>Sistema em Java para controle financeiro pessoal, com análise estatística, categorização de gastos e relatórios visuais. Focado em Programação Orientada a Objetos.</p>
+        
+        <div class="projeto-tags">
+            <span class="tag">Java</span>
+            <span class="tag">POO</span>
+            <span class="tag">Collections</span>
+            <span class="tag">Console</span>
+        </div>
+        
+        <div class="projeto-links">
+            <!-- Link para código no GitHub -->
+            <a href="https://github.com/vanessanydza/Cofrinho-java" 
+               target="_blank" class="btn-project">
+                <i class="fab fa-github"></i> Código
+            </a>
+            <!-- Link para a demonstração no GitHub Pages -->
+            <a href="https://vanessanydza.github.io/Cofrinho-java/" 
+               target="_blank" class="btn-project btn-secondary">
+                <i class="fas fa-play-circle"></i> Site
+            </a>
+        </div>
+    </article>
+
+        </div>
+            
+            <!-- Link para GitHub completo -->
+            <div class="github-all-container">
+                <a href="https://github.com/vanessanydza?tab=repositories" 
+                   target="_blank" class="github-all-btn">
+                    <i class="fab fa-github"></i> Ver todos no GitHub
+                </a>
             </div>
         </section>
 
-
     <!-- ===========================
-        SEÇÃO: CONTATO (FORMULÁRIO)
+        SEÇÃO: CONTATO
     ============================ -->
         <section id="contato" class="secao fade-up">
             <h2>Contato</h2>
+            
+            <div class="contato-info">
+                <p>Vamos conversar sobre tecnologia e projetos!</p>
+                <div class="contato-links">
+                    
+                    <a href="mailto:nydza.vanessa@gmail.com" class="contato-link">
+                        <i class="fas fa-envelope"></i> nydza.vanessa@gmail.com
+                    </a>
+                    <a href="https://github.com/vanessanydza" 
+                       target="_blank" class="contato-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
 
             <form id="contact-form" aria-labelledby="contato">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" placeholder="Seu nome" required aria-describedby="name-help">
+                    <small id="name-help" class="help-text">Digite seu nome completo</small>
+                </div>
 
-                <label for="name">Nome:</label>
-                <input type="text" id="name" placeholder="Seu nome" required aria-describedby="name-help">
-                <small id="name-help" class="help-text">Digite seu nome completo</small>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="email@exemplo.com" required aria-describedby="email-help">
+                    <small id="email-help" class="help-text">Digite um e-mail válido</small>
+                </div>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" placeholder="email@exemplo.com" required aria-describedby="email-help">
-                <small id="email-help" class="help-text">Digite um e-mail válido</small>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" placeholder="Digite sua mensagem..." required rows="5" aria-describedby="message-help"></textarea>
+                    <small id="message-help" class="help-text">Máximo 500 caracteres</small>
+                </div>
 
-                <label for="message">Mensagem:</label>
-                <textarea id="message" placeholder="Digite sua mensagem..." required rows="5" aria-describedby="message-help"></textarea>
-                <small id="message-help" class="help-text">Máximo 500 caracteres</small>
-
-                <button type="submit" class="btn">Enviar Mensagem</button>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
             </form>
         </section>
     </main>
@@ -134,12 +246,26 @@
         RODAPÉ
     ============================ -->
     <footer class="site-footer">
-        © 2025 Vanessa — Portfólio pessoal<br>
-        <small>Tecnologias: HTML5, CSS3, JavaScript</small>
+        <div class="footer-content">
+            <p>© 2025 Vanessa Nydza — Portfólio pessoal</p>
+            <p class="footer-tech">
+                <small>
+                    Tecnologias: HTML5 • CSS3 • JavaScript • Python • Java • Git<br>
+                    Site desenvolvido com ❤️ e hospedado no GitHub Pages
+                </small>
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/vanessanydza" target="_blank" class="footer-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#portfolio" class="footer-link">
+                    <i class="fas fa-code"></i> Ver Projetos
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="javaScript.js"></script>
 
 </body>
-
 </html>
